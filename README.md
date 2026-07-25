@@ -46,7 +46,7 @@ For a window of size `W`, the [arithmetic mean][arithmetic-mean] is defined as
 ```
 
 <!-- <div class="equation" align="center" data-raw-text="\bar{x} = \frac{1}{W} \sum_{i=0}^{W-1} x_i" data-equation="eq:arithmetic_mean">
-    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@c8c3c87eeab590bfdff924ec0fb269fb33a7de2b/lib/node_modules/@stdlib/stats/incr/mmeanvar/docs/img/equation_arithmetic_mean.svg" alt="Equation for the arithmetic mean.">
+    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@6270f0941f8768a3aa3c12e7db9d9c71757c9688/lib/node_modules/@stdlib/stats/incr/nanmmeanvar/docs/img/equation_arithmetic_mean.svg" alt="Equation for the arithmetic mean.">
     <br>
 </div> -->
 
@@ -61,7 +61,7 @@ s^2 = \frac{1}{W-1} \sum_{i=0}^{W-1} ( x_i - \bar{x} )^2
 ```
 
 <!-- <div class="equation" align="center" data-raw-text="s^2 = \frac{1}{W-1} \sum_{i=0}^{W-1} ( x_i - \bar{x} )^2" data-equation="eq:unbiased_sample_variance">
-    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@563a8587d936008c82db675be84f8ce1474fee27/lib/node_modules/@stdlib/stats/incr/mmeanvar/docs/img/equation_unbiased_sample_variance.svg" alt="Equation for the unbiased sample variance.">
+    <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@6270f0941f8768a3aa3c12e7db9d9c71757c9688/lib/node_modules/@stdlib/stats/incr/nanmmeanvar/docs/img/equation_unbiased_sample_variance.svg" alt="Equation for the unbiased sample variance.">
     <br>
 </div> -->
 
@@ -71,14 +71,32 @@ s^2 = \frac{1}{W-1} \sum_{i=0}^{W-1} ( x_i - \bar{x} )^2
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-incr-nanmmeanvar
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import incrnanmmeanvar from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmmeanvar@deno/mod.js';
+var incrnanmmeanvar = require( '@stdlib/stats-incr-nanmmeanvar' );
 ```
 
 #### incrnanmmeanvar( \[out,] window )
@@ -92,7 +110,7 @@ var accumulator = incrnanmmeanvar( 3 );
 By default, the returned accumulator `function` returns the accumulated values as a two-element `array`. To avoid unnecessary memory allocation, the function supports providing an output (destination) object.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var accumulator = incrnanmmeanvar( new Float64Array( 2 ), 3 );
 ```
@@ -153,11 +171,11 @@ out = accumulator();
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@deno/mod.js';
-import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@deno/mod.js';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import ArrayBuffer from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-buffer@deno/mod.js';
-import incrnanmmeanvar from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmmeanvar@deno/mod.js';
+var uniform = require( '@stdlib/random-base-uniform' );
+var bernoulli = require( '@stdlib/random-base-bernoulli' );
+var Float64Array = require( '@stdlib/array-float64' );
+var ArrayBuffer = require( '@stdlib/array-buffer' );
+var incrnanmmeanvar = require( '@stdlib/stats-incr-nanmmeanvar' );
 
 var offset;
 var acc;
@@ -225,7 +243,7 @@ for ( i = 0; i < N; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
