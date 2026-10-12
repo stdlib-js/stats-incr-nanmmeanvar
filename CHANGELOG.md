@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-13)
+## Unreleased (2026-10-12)
 
 <section class="features">
 
@@ -34,6 +34,7 @@ This release closes the following issue:
 
 <details>
 
+-   [`6e2cfd7`](https://github.com/stdlib-js/stdlib/commit/6e2cfd71c335a55f1b72ed73e79cf858f5193520) - **test:** migrate `stats/incr/nanmmeanvar` to ULP-based assertions [(#16082)](https://github.com/stdlib-js/stdlib/pull/16082) _(by Athan Reines)_
 -   [`f25221d`](https://github.com/stdlib-js/stdlib/commit/f25221d5fcb5e84cb0ad4951db6f08f254c12d15) - **docs:** update Markdown equation elements _(by stdlib-bot)_
 -   [`6270f09`](https://github.com/stdlib-js/stdlib/commit/6270f0941f8768a3aa3c12e7db9d9c71757c9688) - **feat:** add `stats/incr/nanmmeanvar` [(#8502)](https://github.com/stdlib-js/stdlib/pull/8502) _(by Anoof Mohammed KP, Athan Reines, Philipp Burckhardt, stdlib-bot)_
 
